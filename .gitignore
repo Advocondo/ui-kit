@@ -18,7 +18,5 @@ CLAUDE.md
 SKILL.md
 .thumbnail
 thumbnail.html
-_ds_bundle.js
-_ds_manifest.json
 _adherence.oxlintrc.json
 **/*.prompt.md
