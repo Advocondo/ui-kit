@@ -20,3 +20,4 @@ SKILL.md
 thumbnail.html
 _adherence.oxlintrc.json
 **/*.prompt.md
+.claude/
