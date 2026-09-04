@@ -2,6 +2,8 @@
 
 Design system for **Edson Alexandre Advogados**, a Brasília-based law firm (Águas Claras/DF), and for **EA Processos**, the internal platform for administration, monitoring and auditing of the judicial cases tied to the firm and its clients — mostly condominiums.
 
+Consuming this from a TypeScript/React (or Next.js) application? See [`LIBRARY.md`](LIBRARY.md) for installation and usage — this file stays the source of truth for the brand and design foundations themselves.
+
 ---
 
 ## 1. Context
