@@ -51,6 +51,6 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
-    "lint": "oxlint -c _adherence.oxlintrc.json src"
+    "smoke": "node scripts/smoke-test.mjs"
   }
 }
