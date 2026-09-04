@@ -1,0 +1,11 @@
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:var(--type-body);color:var(--text-body);background:var(--surface-page);-webkit-font-smoothing:antialiased;text-wrap:pretty}
+h1,h2,h3,h4{margin:0;color:var(--text-heading);font-family:var(--font-display);font-weight:var(--fw-bold);line-height:var(--lh-heading)}
+p{margin:0}
+a{color:var(--text-link);text-decoration:none;transition:var(--transition-control)}
+a:hover{color:var(--text-link-hover);text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:none;box-shadow:var(--ring-focus)}
+button{font:inherit}
+::selection{background:var(--navy-200);color:var(--navy-900)}
+.ea-eyebrow{font:var(--type-eyebrow);letter-spacing:var(--ls-eyebrow);text-transform:uppercase}
+.ea-num{font:var(--type-numeric);font-variant-numeric:tabular-nums}

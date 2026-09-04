@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# OS
+.DS_Store
+
+# Env / logs
+*.log
+.env
+.env.local
+
+# Local tooling / agent config — not part of the published design system
+CLAUDE.md
+SKILL.md
+.thumbnail
+thumbnail.html
+_ds_bundle.js
+_ds_manifest.json
+_adherence.oxlintrc.json
+**/*.prompt.md

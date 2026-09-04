@@ -1,0 +1,30 @@
+<!-- @dsCard group="Components" viewport="700x400" name="Brand — Logo, SectionTitle, PracticeCard, TeamCard" subtitle="Elementos de marca do site institucional" -->
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);font:var(--type-body)}#root{padding:20px}.row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.col{display:flex;flex-direction:column;gap:14px}.lbl{font:var(--type-eyebrow);letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--text-muted)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.EdsonAlexandreAdvogadosDesignSystem_e96c05;
+const { Logo, SectionTitle, PracticeCard, TeamCard } = NS;
+function Demo(){return (<div className="col" style={{gap:0}}>
+<div style={{background:'var(--navy-900)',padding:'24px 20px',display:'grid',gap:22,justifyItems:'center'}}>
+<div className="row" style={{gap:34,alignItems:'flex-end'}}><Logo variant="mark" height={54} base="../../assets/"/><Logo variant="lockup" height={72} base="../../assets/"/><Logo variant="wordmark" height={64}/></div>
+<SectionTitle size="sm" sub="Um condomínio bem assessorado, juridicamente, corre menos riscos de enfrentar problemas em seus contratos.">Assessoria jurídica para condomínios</SectionTitle>
+<div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:12,width:'100%'}}>
+<PracticeCard title="Direito Condominial">Somos especialistas em Direito Condominial! Temos mais de 14 anos de experiência!</PracticeCard>
+<PracticeCard title="Direito Imobiliário">Problemas com questões relacionadas a imóveis, incluindo compra, venda e locação?</PracticeCard>
+<PracticeCard title="Direito Civil">Estamos aqui para resolver questões relacionadas a contratos e responsabilidade civil.</PracticeCard></div>
+<div className="row" style={{gap:10,justifyContent:'center'}}>
+<TeamCard width={96} name="Dr. Edson Alexandre" role="Advogado Sócio" photo="../../assets/team/edson-alexandre.png"/>
+<TeamCard width={96} name="Dra. Amanda Pessoa" role="Advogada Sócia" photo="../../assets/team/amanda-pessoa.png"/>
+<TeamCard width={96} name="Emanoela Felício" role="Recuperação de crédito" photo="../../assets/team/emanoela-felicio.png"/>
+<TeamCard width={96} name="Dra. Sarah Holanda" role="Advogada" photo="../../assets/team/sarah-holanda.png"/></div>
+</div>
+<div style={{background:'var(--stone-200)',padding:'22px 20px'}}><SectionTitle onNavy={false} sentenceCase>Também atendemos online para todo o Brasil.</SectionTitle></div>
+</div>)}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

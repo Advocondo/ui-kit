@@ -1,0 +1,37 @@
+:root{
+--font-display:"Playfair Display",Georgia,"Times New Roman",serif;
+--font-logotype:"Cinzel","Playfair Display",Georgia,serif;
+--font-sans:"Poppins","Helvetica Neue",Helvetica,sans-serif;
+--font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+
+--fs-display-1:56px;--fs-display-2:42px;--fs-display-3:32px;
+--fs-h1:26px;--fs-h2:21px;--fs-h3:17px;
+--fs-body-lg:17px;--fs-body:15px;--fs-body-sm:13.5px;--fs-caption:12px;--fs-micro:10.5px;
+
+--lh-display:1.14; /* @kind font */
+--lh-heading:1.28; /* @kind font */
+--lh-body:1.75; /* @kind font */
+--lh-tight:1.4; /* @kind font */
+
+--fw-light:300; /* @kind font */
+--fw-regular:400; /* @kind font */
+--fw-medium:500; /* @kind font */
+--fw-semibold:600; /* @kind font */
+--fw-bold:700; /* @kind font */
+--fw-black:900; /* @kind font */
+
+--ls-display:-0.01em; /* @kind font */
+--ls-heading:0.01em; /* @kind font */
+--ls-body:0; /* @kind font */
+--ls-eyebrow:0.18em; /* @kind font */
+--ls-logotype:0.14em; /* @kind font */
+
+/* Composed roles */
+--type-display:var(--fw-bold) var(--fs-display-1)/var(--lh-display) var(--font-display);
+--type-section-title:var(--fw-bold) var(--fs-display-3)/var(--lh-heading) var(--font-display);
+--type-card-title:var(--fw-bold) var(--fs-h2)/var(--lh-tight) var(--font-sans);
+--type-body:var(--fw-light) var(--fs-body)/var(--lh-body) var(--font-sans);
+--type-ui:var(--fw-medium) var(--fs-body-sm)/1.45 var(--font-sans);
+--type-eyebrow:var(--fw-semibold) var(--fs-micro)/1.2 var(--font-sans);
+--type-numeric:var(--fw-medium) var(--fs-body-sm)/1.45 var(--font-mono);
+}

@@ -1,0 +1,26 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Forms — Input, Select, Checkbox, Radio, Switch" subtitle="Campos de 40px, raio 6px, foco navy" -->
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);font:var(--type-body)}#root{padding:20px}.row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.col{display:flex;flex-direction:column;gap:14px}.lbl{font:var(--type-eyebrow);letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--text-muted)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.EdsonAlexandreAdvogadosDesignSystem_e96c05;
+const { Input, Textarea, Select, Checkbox, Radio, Switch, FieldLabel } = NS;
+function Demo(){const [on,setOn]=React.useState(true);const [chk,setChk]=React.useState(true);const [rd,setRd]=React.useState('1');
+return (<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20}}>
+<div><FieldLabel required>Nome e Sobrenome</FieldLabel><Input placeholder="Bruno Nogueira"/></div>
+<div><FieldLabel hint="formato CNJ">Número do processo</FieldLabel><Input mono placeholder="0000000-00.0000.0.00.0000"/></div>
+<div><FieldLabel>Buscar</FieldLabel><Input icon="search" placeholder="Buscar processo, cliente ou vara"/></div>
+<div><FieldLabel required>E-mail</FieldLabel><Input invalid error="Informe um e-mail válido" value="bruno@"/></div>
+<div><FieldLabel>Área de atuação</FieldLabel><Select placeholder="Todas as áreas" options={['Condominial','Imobiliário','Civil','Consumidor','Família e Sucessões']}/></div>
+<div><FieldLabel>Desabilitado</FieldLabel><Input disabled value="Somente leitura"/></div>
+<div style={{gridColumn:'1 / -1'}}><FieldLabel>Mensagem</FieldLabel><Textarea rows={3} placeholder="Descreva o ocorrido"/></div>
+<div className="col" style={{gap:10}}><Checkbox checked={chk} onChange={()=>setChk(!chk)} label="Atendimento Personalizado."/><Checkbox label="Notificar por WhatsApp" description="Enviamos alertas de prazo fatal"/></div>
+<div className="col" style={{gap:10}}><Radio name="i" checked={rd==='1'} onChange={()=>setRd('1')} label="1ª instância"/><Radio name="i" checked={rd==='2'} onChange={()=>setRd('2')} label="2ª instância"/><Switch checked={on} onChange={()=>setOn(!on)} label="Monitorar movimentações"/></div>
+</div>)}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

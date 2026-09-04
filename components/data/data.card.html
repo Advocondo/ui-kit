@@ -1,0 +1,27 @@
+<!-- @dsCard group="Components" viewport="700x400" name="Data — DataTable, MetricCard, Timeline, EmptyState" subtitle="Números tabulares, histórico e vazios" -->
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);font:var(--type-body)}#root{padding:20px}.row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.col{display:flex;flex-direction:column;gap:14px}.lbl{font:var(--type-eyebrow);letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--text-muted)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.EdsonAlexandreAdvogadosDesignSystem_e96c05;
+const { DataTable, SortHeader, MetricCard, Timeline, EmptyState, StatusPill, Button } = NS;
+const rows=[{id:1,numero:'0703451-22.2025.8.07.0020',cliente:'Res. Villa Verde',status:'urgente',valor:'R$ 48.320,00'},
+{id:2,numero:'0711902-04.2025.8.07.0001',cliente:'Cond. Parque das Águas',status:'ativo',valor:'R$ 12.700,00'},
+{id:3,numero:'0698114-77.2024.8.07.0016',cliente:'Ed. Century Plaza',status:'acordo',valor:'R$ 205.480,00'}];
+function Demo(){return (<div className="col" style={{gap:18}}>
+<div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:12}}>
+<MetricCard label="Processos ativos" value="248" icon="gavel" delta="+12 no mês" deltaTone="up"/>
+<MetricCard label="Prazos em 7 dias" value="7" icon="calendar-clock" footnote="2 fatais"/>
+<MetricCard label="Crédito recuperado" value="R$ 1,4M" icon="banknote" delta="-3% no trimestre" deltaTone="down"/></div>
+<DataTable selectedId={1} onRowClick={()=>{}} columns={[{key:'numero',label:<SortHeader label="Número CNJ" dir="asc"/>,mono:true,strong:true},{key:'cliente',label:'Cliente'},{key:'status',label:'Status',render:(r)=><StatusPill status={r.status}/>},{key:'valor',label:'Valor da causa',mono:true,align:'right'}]} rows={rows}/>
+<div style={{display:'grid',gridTemplateColumns:'1.15fr .85fr',gap:18,alignItems:'start'}}>
+<Timeline items={[{title:'Sentença publicada',date:'28/08/2026',tone:'ok',icon:'gavel',description:'Procedência parcial. Cobrança das taxas em atraso deferida.',meta:'Registrado por Dr. Edson Alexandre'},{title:'Audiência de conciliação',date:'14/07/2026',tone:'brand',icon:'users',description:'Sem acordo entre as partes.'},{title:'Prazo para contestação',date:'02/06/2026',tone:'warn',icon:'calendar-clock'}]}/>
+<div style={{border:'1px solid var(--border-subtle)',borderRadius:6,background:'var(--surface-card)'}}><EmptyState compact icon="calendar-clock" title="Nenhum prazo nos próximos 7 dias" description="Cadastre um prazo para acompanhá-lo aqui." action={<Button size="sm" icon="plus">Novo prazo</Button>}/></div>
+</div></div>)}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

@@ -1,0 +1,10 @@
+:root{
+--radius-none:0px;
+--radius-xs:3px;
+--radius-sm:6px;
+--radius-md:10px;   /* site's info cards */
+--radius-lg:14px;
+--radius-pill:999px;
+--border-w:1px;
+--border-w-strong:2px;
+}

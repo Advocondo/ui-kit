@@ -1,0 +1,46 @@
+:root{
+/* ── Base · Navy (brand core) ───────────────────────────── */
+--navy-950:#010C2A;--navy-900:#0F1528;--navy-850:#121B33;--navy-800:#16203C;--navy-700:#1E2B4D;
+--navy-600:#001D4B;--navy-500:#0B2F5B;--navy-400:#1D4C86;--navy-300:#4A79B3;--navy-200:#A8C2E0;--navy-100:#DDE7F3;--navy-50:#F0F5FB;
+/* ── Base · Stone (neutrals, from the site's light band #E8E6E6) ── */
+--stone-0:#FFFFFF;--stone-50:#FAFAF9;--stone-100:#F3F2F1;--stone-200:#E8E6E6;--stone-300:#D6D3D1;
+--stone-400:#B4AFAC;--stone-500:#85807D;--stone-600:#5C5754;--stone-700:#3D3936;--stone-800:#26231F;
+/* ── Base · Semantic hues (desaturated to sit beside navy) ── */
+--green-700:#164F35;--green-600:#1F6F4A;--green-300:#8CC4A9;--green-50:#EBF4EF;
+--amber-700:#7D5612;--amber-600:#A9761C;--amber-300:#E0BE7C;--amber-50:#FBF3E4;
+--red-700:#7E241F;--red-600:#A8322D;--red-300:#DFA09C;--red-50:#FAECEB;
+--info-600:#0B2F5B;--info-300:#8FB0D4;--info-50:#EDF3FA;
+/* ── Semantic · Surfaces ─────────────────────────────────── */
+--surface-page:var(--stone-100);
+--surface-card:var(--stone-0);
+--surface-sunken:var(--stone-200);
+--surface-inverse:var(--navy-900);
+--surface-inverse-raised:var(--navy-800);
+--surface-brand:var(--navy-600);
+--surface-brand-subtle:var(--navy-50);
+--surface-hover:var(--stone-100);
+--surface-selected:var(--navy-50);
+--surface-overlay:rgba(1,12,42,.62);
+/* ── Semantic · Text ────────────────────────────────────── */
+--text-heading:var(--navy-900);
+--text-body:var(--stone-700);
+--text-muted:var(--stone-500);
+--text-brand:var(--navy-600);
+--text-on-inverse:var(--stone-0);
+--text-on-inverse-muted:rgba(255,255,255,.66);
+--text-on-brand:var(--stone-0);
+--text-link:var(--navy-500);
+--text-link-hover:var(--navy-400);
+/* ── Semantic · Borders ─────────────────────────────────── */
+--border-subtle:var(--stone-200);
+--border-default:var(--stone-300);
+--border-strong:var(--navy-900);
+--border-inverse:rgba(255,255,255,.22);
+--border-focus:var(--navy-400);
+/* ── Semantic · Status (processos) ──────────────────────── */
+--status-ok-fg:var(--green-700);--status-ok-bg:var(--green-50);--status-ok-border:var(--green-300);
+--status-warn-fg:var(--amber-700);--status-warn-bg:var(--amber-50);--status-warn-border:var(--amber-300);
+--status-risk-fg:var(--red-700);--status-risk-bg:var(--red-50);--status-risk-border:var(--red-300);
+--status-info-fg:var(--info-600);--status-info-bg:var(--info-50);--status-info-border:var(--info-300);
+--status-neutral-fg:var(--stone-600);--status-neutral-bg:var(--stone-100);--status-neutral-border:var(--stone-300);
+}
